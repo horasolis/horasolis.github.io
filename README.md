@@ -40,34 +40,34 @@ May this project help you rediscover your own rhythm.
 
 The following reflects the Roman system of daily time:
 
-* **Tempus 🌞 diei / Tempus 🌚 noctis**
+* **Tempus 🌞 diei / Tempus 🌚 noctis**  
   A two-column display of day and night temporal hours.
 
-* **Roman hours Ⅰ–Ⅻ**
+* **Roman hours Ⅰ–Ⅻ**  
   The twelve daytime hours measured from sunrise to sunset.
 
-* **Night watches (vigilia prima to vigilia quarta)**
+* **Night watches (vigilia prima to vigilia quarta)**  
   The night divided into four watches, each spanning three nighttime hours.
 
-* **Tempus somni**
+* **Tempus somni**  
   A suggested sleep period timed to support waking at sunrise.
 
-* **Diu et nox duratio**
+* **Diu et nox duratio**  
   Duration of daylight and darkness, shifting with the seasons.
 
-* **Dies civilis 🏛️**
+* **Dies civilis 🏛️**  
   The civil time and date in modern notation.
 
-* **Ortus solis 🌅 / Occasus solis 🌇**
+* **Ortus solis 🌅 / Occasus solis 🌇**  
   Sunrise and sunset times for the current day.
 
-* **Ortus solis diei sequentis ⏭️🌅**
+* **Ortus solis diei sequentis ⏭️🌅**  
   Time of tomorrow’s sunrise.
 
-* **Tempus ad somnum quaerendum 🛏️**
+* **Tempus ad somnum quaerendum 🛏️**  
   Recommended bedtime for rising with the sun.
 
-* **Cursus horologii 🐇/🐌**
+* **Cursus horologii 🐇/🐌**  
   The pace of the clock, reflecting seasonal shifts in hour length.
 
 ## Supporting Hora Solis and future projects
