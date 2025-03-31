@@ -44,7 +44,7 @@ The following reflects the Roman system of daily time:
 
 * **Roman hours Ⅰ–Ⅻ** – Twelve daylight hours (from sunrise to sunset).
 
-* **Night watches (Vigilia prima to vigilia quarta)** – Dividing the night into four parts, each with three segments.
+* **Night watches (vigilia prima to vigilia quarta)** – Dividing the night into four parts, each with three segments.
 
 * **Tempus somni** – Naturally suggested times for rest, guided by the rhythm of the night.
 
@@ -62,11 +62,11 @@ The following reflects the Roman system of daily time:
 
 ## Supporting Hora Solis and future projects
 
-Please consider supporting the founding author of [Hora Solis](https://horasolis.github.io) in recognition of the dedication and effort already invested. Your support will provide the space needed for reflection, exploration of new ideas, and the pursuit of future endeavors beyond this project.
+If you appreciate the work behind [Hora Solis](https://horasolis.github.io), consider supporting its [founding author](https://github.com/senotrusov). Your support honors the time and dedication already invested and helps make room for reflection, new ideas, and future projects beyond this one.
 
-[Donate with Bitcoin](bitcoin:bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s?message=Hora%20Solis%20project%20donation) – bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s
+Donate with Bitcoin – bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s
 
-[![Donate with Bitcoin, QR code](docs/images/donate-link.png)](bitcoin:bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s?message=Hora%20Solis%20project%20donation "Donate with Bitcoin, QR code").
+![Donate with Bitcoin, QR code](docs/images/donate-link.png).
 
 If you find this project helpful, share it with others who might like it — whether it's chatting with friends or posting about it on social media. Every little mention helps it reach someone who might really appreciate it.
 
