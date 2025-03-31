@@ -178,7 +178,7 @@ function dayDurationView({dayMilliseconds, nightMilliseconds, isDay}) {
   // Margin reduced by 4px because of the hours list in the previous block
   return [`
     <div class="mt-3 text-center text-xs font-bold tracking-widest text-gray-600 sm:mt-5 sm:text-sm lg:mt-7 lg:text-base dark:text-stone-100">
-      <span class="text-amber-500 dark:text-yellow-100">DIU</span> ET <span class="text-indigo-500 dark:text-purple-100">NOX</span> DURATIO
+      <span class="text-amber-500 dark:text-yellow-100">DIU 🌞</span> ET <span class="text-indigo-500 dark:text-purple-100">NOX 🌚</span> DURATIO
     </div>
 
     <div class="mt-1 flex items-center justify-center text-center text-sm font-bold text-gray-600 sm:mt-2 sm:text-base lg:text-lg">

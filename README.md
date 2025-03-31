@@ -14,7 +14,7 @@
   limitations under the License.
 -->
 
-## Hora Solis – a Roman clock of the natural day
+## Hora Solis – a Roman clock dividing day and night into temporal hours
 
 **[Hora Solis](https://horasolis.github.io)** is a digital reinterpretation of ancient Roman timekeeping — a system that aligns the day not with factory clocks or timezones, but with the movement of the sun across the sky.
 
@@ -40,25 +40,35 @@ May this project help you rediscover your own rhythm.
 
 The following reflects the Roman system of daily time:
 
-* **Tempus 🌞 diei / Tempus 🌚 noctis** – The current phase of the day: daytime or nighttime.
+* **Tempus 🌞 diei / Tempus 🌚 noctis**
+  A two-column display of day and night temporal hours.
 
-* **Roman hours Ⅰ–Ⅻ** – Twelve daylight hours (from sunrise to sunset).
+* **Roman hours Ⅰ–Ⅻ**
+  The twelve daytime hours measured from sunrise to sunset.
 
-* **Night watches (vigilia prima to vigilia quarta)** – Dividing the night into four parts, each with three segments.
+* **Night watches (vigilia prima to vigilia quarta)**
+  The night divided into four watches, each spanning three nighttime hours.
 
-* **Tempus somni** – Suggested sleep period calculated to allow waking at sunrise.
+* **Tempus somni**
+  A suggested sleep period timed to support waking at sunrise.
 
-* **Diu et nox duratio** – Length of day and night, which shift with the seasons.
+* **Diu et nox duratio**
+  Duration of daylight and darkness, shifting with the seasons.
 
-* **Dies civilis 🏛️** – The civil date and time, in modern notation.
+* **Dies civilis 🏛️**
+  The civil time and date in modern notation.
 
-* **Ortus solis 🌅 / Occasus solis 🌇** – Today's sunrise and sunset times.
+* **Ortus solis 🌅 / Occasus solis 🌇**
+  Sunrise and sunset times for the current day.
 
-* **Ortus solis diei sequentis ⏭️🌅** – Tomorrow's sunrise, giving you a preview of the next cycle.
+* **Ortus solis diei sequentis ⏭️🌅**
+  Time of tomorrow’s sunrise.
 
-* **Tempus ad somnum quaerendum 🛏️** – Recommended bedtime for waking with the sun.
+* **Tempus ad somnum quaerendum 🛏️**
+  Recommended bedtime for rising with the sun.
 
-* **Cursus horologii 🐇/🐌** – Clock speed, which reflects changes in hour length.
+* **Cursus horologii 🐇/🐌**
+  The pace of the clock, reflecting seasonal shifts in hour length.
 
 ## Supporting Hora Solis and future projects
 
@@ -68,7 +78,25 @@ Donate with Bitcoin – bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s
 
 ![Donate with Bitcoin, QR code](docs/images/donate-link.png).
 
-If you find this project helpful, share it with others who might like it — whether it's chatting with friends or posting about it on social media. Every little mention helps it reach someone who might really appreciate it.
+If you find this project helpful, share it with others who might like it — whether it’s chatting with friends or posting about it on social media. Every little mention helps it reach someone who might really appreciate it.
+
+## Future roadmap
+
+These are some directions the project may take moving forward:
+
+1. **Sleep configuration and multi-phase sleep**  
+   Customizable sleep schedules, including support for segmented and other polyphasic sleep patterns.
+
+2. **Adjustable solar event angles**  
+   More precise control over when sunrise and sunset are considered to occur, by setting how far the sun is below the horizon.
+
+3. **Task planning**  
+   Ways to organize the day around natural light and solar rhythms.
+
+4. **Calendar integration**  
+   Syncing with external calendar services to keep everything aligned.
+
+Bringing these ideas to life will take time and effort. Whether or not they happen depends on how much interest the project receives. Donations are one way to show support and help shape what comes next.
 
 ## License
 
@@ -109,8 +137,8 @@ Take a look at the [CONTRIBUTING](CONTRIBUTING.md) file for contribution informa
 
 ### Sun azimuth
 
-The sun's azimuth is the compass direction from which sunlight is coming at a given point on Earth's surface.
-It is typically defined as the angle between the sun's position and true north, measured clockwise:
+The sun’s azimuth is the compass direction from which sunlight is coming at a given point on Earth’s surface.
+It is typically defined as the angle between the sun’s position and true north, measured clockwise:
 
 * 0° = North
 * 90° = East

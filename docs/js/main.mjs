@@ -19,6 +19,13 @@ import { locateUser } from "./lib.mjs";
 import { clockView } from "./view.mjs";
 
 document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('toggle-info').addEventListener('click', function () {
+    const block = document.getElementById('info-block');
+    const isHidden = block.classList.contains('hidden');
+    block.classList.toggle('hidden');
+    this.textContent = isHidden ? 'Fold this description' : '🤷 Quid est hoc?';
+  });
+
   locateUser()
     .then(
       (position) => {

@@ -691,16 +691,16 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+.ml-6 {
+  margin-left: 1.5rem;
 }
 
 .mr-8 {
@@ -779,8 +779,8 @@ video {
   max-width: 56rem;
 }
 
-.list-inside {
-  list-style-position: inside;
+.list-outside {
+  list-style-position: outside;
 }
 
 .list-disc {
@@ -812,6 +812,10 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.break-words {
+  overflow-wrap: break-word;
 }
 
 .rounded {
@@ -886,10 +890,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -899,9 +899,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-lg\/8 {
+.text-lg {
   font-size: 1.125rem;
-  line-height: 2rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -958,6 +958,11 @@ video {
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-800 {
@@ -1021,6 +1026,15 @@ video {
          column-gap: 0.5rem;
   }
 
+  .sm\:whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  .sm\:break-normal {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
   .sm\:px-1 {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -1051,6 +1065,14 @@ video {
   .lg\:inset-x-28 {
     left: 7rem;
     right: 7rem;
+  }
+
+  .lg\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .lg\:mt-3 {
@@ -1084,6 +1106,12 @@ video {
   .lg\:gap-x-3 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
+  }
+
+  .lg\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:text-4xl {
