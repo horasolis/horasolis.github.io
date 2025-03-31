@@ -46,7 +46,7 @@ The following reflects the Roman system of daily time:
 
 * **Night watches (vigilia prima to vigilia quarta)** – Dividing the night into four parts, each with three segments.
 
-* **Tempus somni** – Naturally suggested times for rest, guided by the rhythm of the night.
+* **Tempus somni** – Suggested sleep period calculated to allow waking at sunrise.
 
 * **Diu et nox duratio** – Length of day and night, which shift with the seasons.
 
@@ -56,7 +56,7 @@ The following reflects the Roman system of daily time:
 
 * **Ortus solis diei sequentis ⏭️🌅** – Tomorrow's sunrise, giving you a preview of the next cycle.
 
-* **Tempus ad somnum quaerendum 🛏️** – Recommended bedtime, based on nightfall.
+* **Tempus ad somnum quaerendum 🛏️** – Recommended bedtime for waking with the sun.
 
 * **Cursus horologii 🐇/🐌** – Clock speed, which reflects changes in hour length.
 
