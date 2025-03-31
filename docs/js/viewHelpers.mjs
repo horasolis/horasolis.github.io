@@ -86,10 +86,10 @@ const fractionNames = new Map([
 
 // Initialize the fractions map
 const fractionDecimalValues = new Map(
-  fractionNames.keys().map((i) => {
-      const [a, b] = i.split('/');
-      return [a / b, i];
-    })
+  Array.from(fractionNames.keys()).map((i) => {
+    const [a, b] = i.split('/');
+    return [a / b, i];
+  })
 );
 
 // Function to find the closest key and return its value
