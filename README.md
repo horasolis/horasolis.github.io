@@ -1,0 +1,119 @@
+<!--
+  Copyright 2024-2025 Hora Solis project contributors
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+## Hora Solis – a Roman clock of the natural day
+
+**[Hora Solis](https://horasolis.github.io)** is a digital reinterpretation of ancient Roman timekeeping — a system that aligns the day not with factory clocks or timezones, but with the movement of the sun across the sky.
+
+Unlike modern timekeeping, which divides every day into 24 identical hours regardless of season or place, the Roman system divides *daylight* into twelve equal hours (*horae*) and *night* into four watches (*vigiliae*). The length of these hours shifts with the seasons — shorter in winter, longer in summer — because the sun sets the pace.
+
+This project presents Roman time in a visual, intuitive form. It doesn’t just tell you the hour — it shows how the shape of the day is changing around you.
+
+## Why this matters
+
+Modern time exists to synchronize us. Timezones, standardized hours, and daylight saving are tools of industry — designed for factories, offices, and global schedules. They reduce time to something fixed and mechanical: a uniform rhythm imposed everywhere, detached from place, light, and season.
+
+But natural time isn’t uniform. The sun doesn’t rise at 6:00 every day. Days lengthen and shorten, light shifts, and with it, our sense of being changes — even if the clock doesn’t reflect it.
+
+Roman timekeeping invites us to see time differently: not as a grid to obey, but as a rhythm woven into the fabric of life. It expands and contracts with the sun, flows with the day, and settles into the night. It restores a deeper awareness of time — not as something measured, but as something lived.
+
+You may find yourself planning your day differently — setting aside the evening *vigiliae* for quiet work, time with family, reading, or creative focus. If you follow a biphasic sleep rhythm, you might align your shorter rest with midday or early night, letting the first hours of darkness become a calm, intentional space. Or perhaps you’ll discover the quiet clarity of early morning, just as the world begins to wake.
+
+May this project help you rediscover your own rhythm.
+
+## What the interface displays
+
+[See the live page](https://horasolis.github.io).
+
+The following reflects the Roman system of daily time:
+
+* **Tempus 🌞 diei / Tempus 🌚 noctis** – The current phase of the day: daytime or nighttime.
+
+* **Roman hours Ⅰ–Ⅻ** – Twelve daylight hours (from sunrise to sunset).
+
+* **Night watches (Vigilia prima to vigilia quarta)** – Dividing the night into four parts, each with three segments.
+
+* **Tempus somni** – Naturally suggested times for rest, guided by the rhythm of the night.
+
+* **Diu et nox duratio** – Length of day and night, which shift with the seasons.
+
+* **Dies civilis 🏛️** – The civil date and time, in modern notation.
+
+* **Ortus solis 🌅 / Occasus solis 🌇** – Today's sunrise and sunset times.
+
+* **Ortus solis diei sequentis ⏭️🌅** – Tomorrow's sunrise, giving you a preview of the next cycle.
+
+* **Tempus ad somnum quaerendum 🛏️** – Recommended bedtime, based on nightfall.
+
+* **Cursus horologii 🐇/🐌** – Clock speed, which reflects changes in hour length.
+
+## Supporting Hora Solis and future projects
+
+Please consider supporting the founding author of [Hora Solis](https://horasolis.github.io) in recognition of the dedication and effort already invested. Your support will provide the space needed for reflection, exploration of new ideas, and the pursuit of future endeavors beyond this project.
+
+[Donate with Bitcoin](bitcoin:bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s?message=Hora%20Solis%20project%20donation) – bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s
+
+[![Donate with Bitcoin, QR code](docs/images/donate-link.png)](bitcoin:bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s?message=Hora%20Solis%20project%20donation "Donate with Bitcoin, QR code").
+
+If you find this project helpful, share it with others who might like it — whether it's chatting with friends or posting about it on social media. Every little mention helps it reach someone who might really appreciate it.
+
+## License
+
+The code in this project is licensed under the [Apache License, Version 2.0](LICENSE), unless otherwise noted below.
+
+**[`docs/js/solarCalculator.mjs`](docs/js/solarCalculator.mjs)**
+
+[NOAA Solar Calculator](https://gml.noaa.gov/grad/solcalc/), provided by Global Monitoring Laboratory of the National Oceanic and Atmospheric Administration (NOAA), Boulder, Colorado, USA (https://gml.noaa.gov).
+
+To the best of my knowledge, the NOAA Solar Calculator code is in the public domain.
+
+**[`docs/vendor/temporal-polyfill-0.2.5.min.js`](docs/vendor/temporal-polyfill-0.2.5.min.js)**
+
+[A lightweight polyfill for Temporal, successor to the JavaScript Date object](https://www.npmjs.com/package/temporal-polyfill).
+
+Copyright (c) 2024 Adam Shaw, licensed under the MIT License.
+
+## Contributing to the Hora Solis project
+
+Take a look at the [CONTRIBUTING](CONTRIBUTING.md) file for contribution information, and check out the [CONTRIBUTORS](CONTRIBUTORS.md) file to see who has helped shape the project.
+
+## Further reading
+
+### Roman timekeeping
+
+* [Roman timekeeping](https://en.wikipedia.org/wiki/Roman_timekeeping), Wikipedia article.
+* [Some Temporal Expressions in Suetonius](https://www.jstor.org/stable/261398) by John C. Rolfe.
+
+### Solar calculations
+
+* [NOAA Solar Calculator Details](https://gml.noaa.gov/grad/solcalc/calcdetails.html)
+
+### Temporal API
+
+* [MDN: `Temporal`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal)
+* [TC39 Temporal Proposal Docs](https://tc39.es/proposal-temporal/docs/)
+* [TC39 Temporal Cookbook](https://tc39.es/proposal-temporal/docs/cookbook.html)
+
+### Sun azimuth
+
+The sun's azimuth is the compass direction from which sunlight is coming at a given point on Earth's surface.
+It is typically defined as the angle between the sun's position and true north, measured clockwise:
+
+* 0° = North
+* 90° = East
+* 180° = South
+* 270° = West
+* 360° = North (completing the circle)
