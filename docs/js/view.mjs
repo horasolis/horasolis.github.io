@@ -200,29 +200,29 @@ function statusLinesView({now, naturalDay, bedtime}) {
   return [`
     <div class="mt-4 text-center text-sm text-black sm:mt-5 sm:text-lg lg:mt-6 lg:text-xl dark:text-stone-50">
 
-      <div class="mt-1 lg:mt-3">
+      <div class="mt-1 lg:mt-2">
         Dies civilis 🏛️&nbsp;${now.toLocaleString(navigator.languages, {dateStyle: 'medium', timeStyle: 'short'})}
       </div>
 
       <div>
-        <div class="mt-1 block sm:inline-block sm:px-1 lg:mt-3">
+        <div class="mt-1 block sm:inline-block sm:px-1 lg:mt-2">
            Ortus solis 🌅&nbsp;${sunrise.toLocaleString(navigator.languages, {timeStyle: 'short'})}
         </div>
 
-        <div class="mt-1 block sm:inline-block sm:px-1 lg:mt-3">
+        <div class="mt-1 block sm:inline-block sm:px-1 lg:mt-2">
           Occasus solis 🌇&nbsp;${sunset.toLocaleString(navigator.languages, {timeStyle: 'short'})}
         </div>
       </div>
 
-      <div class="mt-1 lg:mt-3">
+      <div class="mt-1 lg:mt-2">
         Ortus solis diei sequentis ⏭️🌅&nbsp;${nextSunrise.toLocaleString(navigator.languages, {timeStyle: 'short'})}
       </div>
 
-      <div class="mt-1 lg:mt-3">
+      <div class="mt-1 lg:mt-2">
         Tempus ad somnum quaerendum 🛏️&nbsp;${bedtime.toLocaleString(navigator.languages, {timeStyle: 'short'})}
       </div>
 
-      <div class="mt-1 lg:mt-3">
+      <div class="mt-1 lg:mt-2">
         ${getClockSpeedFractionsText(secondDuration)}
       </div>
 
