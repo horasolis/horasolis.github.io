@@ -18,28 +18,6 @@ import { getNaturalDay } from "./romanClock.mjs";
 import { locateUser } from "./lib.mjs";
 import { clockView } from "./view.mjs";
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('details-toggle').addEventListener('click', function () {
-    const block = document.getElementById('details-section');
-    const isHidden = block.classList.contains('hidden');
-    block.classList.toggle('hidden');
-    this.textContent = isHidden ? 'Fold this description' : '🤷 Quid est hoc?';
-  });
-
-  locateUser()
-    .then(
-      (position) => {
-        runClock(position);
-      },
-      (error) => {
-        console.log('Error in locateUser().then()', error);
-      }
-    )
-    .catch((error) => {
-      console.log('Error in locateUser()', error);
-    });
-});
-
 function runClock(position) {
   const now = Temporal.Now.zonedDateTimeISO();
   const naturalDay = getNaturalDay(position, now);
@@ -64,3 +42,25 @@ function runClock(position) {
 
   document.getElementById('time-display').innerHTML = view.join('');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('details-toggle').addEventListener('click', function () {
+    const detailsSection = document.getElementById('details-section');
+    const isHidden = detailsSection.classList.contains('hidden');
+    detailsSection.classList.toggle('hidden');
+    this.textContent = isHidden ? 'Fold this description' : '🤷 Quid est hoc?';
+  });
+
+  locateUser()
+    .then(
+      (position) => {
+        runClock(position);
+      },
+      (error) => {
+        console.log('Error in locateUser().then()', error);
+      }
+    )
+    .catch((error) => {
+      console.log('Error in locateUser()', error);
+    });
+});
