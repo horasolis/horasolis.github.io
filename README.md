@@ -61,11 +61,11 @@ The following reflects the Roman system of daily time:
 * **Ortus solis 🌅 / Occasus solis 🌇**  
   Sunrise and sunset times for the current day.
 
-* **Ortus solis diei sequentis ⏭️🌅**  
-  Time of tomorrow’s sunrise.
-
 * **Tempus ad somnum quaerendum 🛏️**  
   Recommended bedtime for rising with the sun.
+
+* **Ortus solis diei sequentis ⏭️🌅**  
+  Time of tomorrow’s sunrise.
 
 * **Cursus horologii 🐇/🐌**  
   The pace of the clock, reflecting seasonal shifts in hour length.
