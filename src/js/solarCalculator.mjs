@@ -364,6 +364,8 @@ function calcJDofNextPrevRiseSet(next, rise, JD, latitude, longitude, tz) {
 
 // The following code diverges greatly from the original NOAA Solar Calculator as a result of incorporating the Temporal API.
 
+import { Temporal } from 'temporal-polyfill';
+
 /**
  * Converts a sunrise/sunset event (given Julian date, local time, and azimuth) 
  * to a `Temporal.ZonedDateTime` or `Temporal.PlainDate` depending on the azimuth value.

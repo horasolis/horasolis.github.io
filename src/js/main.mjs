@@ -14,9 +14,10 @@
   limitations under the License.
 */
 
+import { clockView } from "./view.mjs";
 import { getNaturalDay } from "./romanClock.mjs";
 import { locateUser } from "./lib.mjs";
-import { clockView } from "./view.mjs";
+import { Temporal } from 'temporal-polyfill';
 
 function runClock(position) {
   const now = Temporal.Now.zonedDateTimeISO();
@@ -44,6 +45,7 @@ function runClock(position) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
   document.getElementById('details-toggle').addEventListener('click', function () {
     const detailsSection = document.getElementById('details-section');
     const isHidden = detailsSection.classList.contains('hidden');

@@ -15,6 +15,7 @@
 */
 
 import { calculateSolarEvents } from "./solarCalculator.mjs";
+import { Temporal } from 'temporal-polyfill';
 
 /**
  * Checks if a given event time signifies a polar phenomenon by comparing 
