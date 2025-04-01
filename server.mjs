@@ -14,12 +14,12 @@
   limitations under the License.
 */
 
-import http from 'http';
-import path from 'path';
 import fs from 'fs';
+import http from 'http';
 import mime from 'mime'; // For serving the correct MIME types
 import open from 'open'; // Import the open module
 import os from 'os'; // For getting network interfaces
+import path from 'path';
 
 const port = 3000;
 
@@ -45,8 +45,12 @@ function getIPAddresses() {
 
 // Create the server
 const server = http.createServer((req, res) => {
-  // Construct the full file path by appending the requested URL to the 'docs' folder
-  const filePath = path.join(process.cwd(), 'docs', req.url === '/' ? 'index.html' : req.url);
+  // Use global URL to strip query string
+  const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+  const cleanPath = parsedUrl.pathname;
+
+  // Construct the file path
+  const filePath = path.join(process.cwd(), 'docs', cleanPath === '/' ? 'index.html' : cleanPath);
 
   // Read the file and check if it exists inside the callback
   fs.readFile(filePath, (err, data) => {

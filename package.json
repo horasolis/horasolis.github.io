@@ -1,23 +1,25 @@
 {
-  "name": "roman-clock",
+  "name": "horasolis",
   "version": "1.0.0",
   "main": "server.mjs",
   "scripts": {
     "dev:esbuild": "esbuild src/js/main.mjs --bundle --format=esm --minify --out-extension:.js=.mjs --outdir=docs/js --sourcemap --watch",
+    "dev:repomix": "repomix --ignore '.vscode,docs/css,docs/js,docs/vendor',src/js/timezonePosition.mjs,LICENSE",
     "dev:server": "node server.mjs",
     "dev:tailwindcss": "tailwindcss -i src/css/base.css -o docs/css/base.css --watch",
     "lint": "eslint src/js/*.mjs",
     "start": "npm-run-all --parallel dev:*"
   },
-  "author": "",
-  "license": "",
-  "description": "",
+  "author": "Hora Solis project contributors",
+  "license": "Apache-2.0",
+  "description": "A digital Roman clock that divides day and night into temporal hours, revealing how time flows with the sun — expanding and contracting with light.",
   "devDependencies": {
     "@eslint/js": "^9.14.0",
     "esbuild": "^0.25.2",
     "eslint": "^9.14.0",
     "globals": "^15.12.0",
     "npm-run-all": "^4.1.5",
+    "repomix": "^0.3.1",
     "tailwindcss": "^3.4.15"
   },
   "dependencies": {
