@@ -17,7 +17,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./docs/**/*.{html,mjs}"],
+  content: ["docs/**/*.{html,mjs}"],
   theme: {
     extend: {
       screens: {
