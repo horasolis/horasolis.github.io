@@ -13,9 +13,9 @@
     <link rel="manifest" href="manifest.json">
     <script src="js/main.mjs?2" type="module"></script>
   </head>
-  <body class="bg-white dark:bg-stone-600 mb-6 lg:mb-8">
+  <body class="bg-white dark:bg-stone-600 mb-8 lg:mb-10">
     <div id="time-display"></div>
-    <div id="details-section" class="hidden mx-auto px-3 sm:px-4 max-w-4xl text-gray-700 dark:text-stone-100 text-lg lg:text-xl/8">
+    <div id="details-section" class="mx-auto px-3 sm:px-4 max-w-4xl text-gray-700 dark:text-stone-100 text-lg lg:text-xl/8 collapsible-section">
       <h1 class="mt-8 lg:mt-12 font-bold text-4xl lg:text-5xl">Hora Solis</h1>
       <p class="mt-1 lg:mt-2 font-medium text-xl lg:text-2xl">A Roman clock dividing day and night into temporal hours</p>
       <p class="mt-4 lg:mt-6">
@@ -145,7 +145,7 @@
     </div>
 
     <div class="flex justify-center mt-8 lg:mt-12">
-      <button id="details-toggle" class="bg-amber-400 hover:bg-amber-500 shadow px-4 py-2 rounded text-black">
+      <button id="details-toggle" class="bg-amber-400 hover:bg-amber-500 shadow px-4 py-2 rounded text-black" data-expanded="Fold this description" data-collapsed="🤷 Quid est hoc?">
         🤷 Quid est hoc?
       </button>
     </div>

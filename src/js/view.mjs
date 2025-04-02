@@ -29,7 +29,7 @@ import {numbersText} from './locale.mjs';
 export function clockView(clockViewData) {
   const view = [];
 
-  view.push(`<div class="container mx-auto mb-4 sm:px-4">`);
+  view.push(`<div class="container mx-auto sm:px-4">`);
 
   view.push(...naturalDayView(clockViewData));
   view.push(...statusLinesView(clockViewData));

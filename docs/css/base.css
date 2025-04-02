@@ -691,12 +691,8 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .ml-6 {
@@ -741,10 +737,6 @@ video {
 
 .grid {
   display: grid;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-10 {
@@ -1010,6 +1002,30 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.collapsible-section {
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition-duration: 300ms;
+  transition-property: height, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsible-section.expanded {
+  height: auto;
+  /* fallback for browsers that don't support calc-size */
+  height: calc-size(auto, size);
+  opacity: 1;
+  transition-duration: 500ms;
+}
+
+@media (prefers-reduced-motion) {
+  .collapsible-section, 
+  .collapsible-section.expanded {
+    transition-duration: 0s;
+  }
+}
+
 .hover\:bg-amber-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity, 1));
@@ -1104,8 +1120,8 @@ video {
     right: 7rem;
   }
 
-  .lg\:mb-8 {
-    margin-bottom: 2rem;
+  .lg\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .lg\:ml-10 {

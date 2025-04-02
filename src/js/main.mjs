@@ -44,14 +44,27 @@ function runClock(position) {
   document.getElementById('time-display').innerHTML = view.join('');
 }
 
+function collapsibleSection(prefix) {
+  const toggle = document.getElementById(prefix + '-toggle');
+  const section = document.getElementById(prefix + '-section');
+  const { expanded, collapsed } = toggle.dataset;
+
+  toggle.addEventListener('click', () => {
+    if (!section.classList.toggle('expanded')) {
+      toggle.textContent = collapsed;
+    }
+  });
+
+  section.addEventListener('transitionend', () => {
+    if (section.classList.contains('expanded')) {
+      toggle.textContent = expanded;
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
-  document.getElementById('details-toggle').addEventListener('click', function () {
-    const detailsSection = document.getElementById('details-section');
-    const isHidden = detailsSection.classList.contains('hidden');
-    detailsSection.classList.toggle('hidden');
-    this.textContent = isHidden ? 'Fold this description' : '🤷 Quid est hoc?';
-  });
+  collapsibleSection('details');
 
   locateUser()
     .then(

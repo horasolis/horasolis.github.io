@@ -17,3 +17,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.collapsible-section {
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition-duration: 300ms;
+  transition-property: height, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsible-section.expanded {
+  height: auto; /* fallback for browsers that don't support calc-size */
+  height: calc-size(auto, size);
+  opacity: 1;
+  transition-duration: 500ms;
+}
+
+@media (prefers-reduced-motion) {
+  .collapsible-section, 
+  .collapsible-section.expanded {
+    transition-duration: 0s;
+  }
+}
