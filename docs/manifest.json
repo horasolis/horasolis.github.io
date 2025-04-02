@@ -4,7 +4,6 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#facc15",
   "description": "A Roman clock dividing day and night into temporal hours.",
   "icons": [
     {
