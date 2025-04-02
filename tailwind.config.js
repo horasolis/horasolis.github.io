@@ -22,7 +22,8 @@ module.exports = {
     extend: {
       screens: {
         // Custom breakpoints
-        'xs': '480px', // Extra small screens
+        'xxs': '360px', // Starting point for standard phones in portrait mode
+        'xs': '480px'   // For devices larger than standard phones in portrait mode
       },
     },
   },
