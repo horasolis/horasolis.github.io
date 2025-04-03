@@ -16,7 +16,7 @@
 
 ## <span lang="la">Hora Solis</span> – a Roman clock dividing day and night into temporal hours
 
-**[<span lang="la">Hora Solis</span>](https://horasolis.github.io)** is a digital reinterpretation of ancient [Roman timekeeping](https://en.wikipedia.org/wiki/Roman_timekeeping) — a system that aligns the day not with factory clocks or timezones, but with the movement of the sun across the sky.
+**[<span lang="la">Hora Solis</span>](https://horasolis.github.io/)** is a digital reinterpretation of ancient [Roman timekeeping](https://en.wikipedia.org/wiki/Roman_timekeeping) — a system that aligns the day not with factory clocks or timezones, but with the movement of the sun across the sky.
 
 Unlike modern timekeeping, which divides every day into 24 identical hours regardless of season or place, the Roman system divides *daylight* into twelve equal hours (*<span lang="la">horae</span>*) and *night* into four watches (*<span lang="la">vigiliae</span>*). The length of these hours shifts with the seasons — shorter in winter, longer in summer — because the sun sets the pace.
 
@@ -36,7 +36,7 @@ May this project help you rediscover your own rhythm.
 
 ## What the interface displays
 
-[See the live page](https://horasolis.github.io).
+[See the live page](https://horasolis.github.io/).
 
 The following reflects the Roman system of daily time:
 
@@ -72,7 +72,7 @@ The following reflects the Roman system of daily time:
 
 ## Supporting Hora Solis and future projects
 
-If you appreciate the work behind [<span lang="la">Hora Solis</span>](https://horasolis.github.io), consider supporting its [founding author](https://github.com/senotrusov). Your support honors the time and dedication already invested and helps make room for reflection, new ideas, and future projects beyond this one.
+If you appreciate the work behind [<span lang="la">Hora Solis</span>](https://horasolis.github.io/), consider supporting its [founding author](https://github.com/senotrusov). Your support honors the time and dedication already invested and helps make room for reflection, new ideas, and future projects beyond this one.
 
 Donate with Bitcoin – bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s
 

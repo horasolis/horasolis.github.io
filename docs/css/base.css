@@ -777,6 +777,10 @@ video {
   max-width: 56rem;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
 .list-outside {
   list-style-position: outside;
 }
