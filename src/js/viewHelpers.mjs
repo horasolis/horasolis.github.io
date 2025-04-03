@@ -60,10 +60,10 @@ export function getClockSpeedFractionsText(romanSecond) {
 
   if (speedScale > 0) {
     // slower than a modern second
-    return `Cursus horologii 🐌&nbsp;${fractionNames.get(closestFraction)} (${closestFraction}) tardius`;
+    return `Cursus horologii 🐌&nbsp;${fractionNames.get(closestFraction)} (${closestFraction}) parte tardius est`;
   } else {
     // faster than a modern second
-    return `Cursus horologii 🐇&nbsp;${fractionNames.get(closestFraction)} (${closestFraction}) celerius`;
+    return `Cursus horologii 🐇&nbsp;${fractionNames.get(closestFraction)} (${closestFraction}) parte celerius est`;
   }
 }
 
@@ -71,17 +71,17 @@ const fractionNames = new Map([
   ["1/24", "Semuncia"],
   ["1/16", "Sextula"],
   ["1/12", "Uncia"],
-  ["1/8", "Octava"],
-  ["1/6", "Sextante"],
-  ["1/4", "Quadrante"],
-  ["1/3", "Triente"],
-  ["5/12", "Quincunce"],
-  ["1/2", "Semisse"],
-  ["7/12", "Septunce"],
-  ["2/3", "Bisse"],
-  ["3/4", "Dodrante"],
-  ["5/6", "Dextante"],
-  ["11/12", "Deunce"],
+  ["1/8", "Bes"], // Octava
+  ["1/6", "Sextans"],
+  ["1/4", "Quadrans"],
+  ["1/3", "Triens"],
+  ["5/12", "Quincunx"],
+  ["1/2", "Semis"],
+  ["7/12", "Septunx"],
+  ["2/3", "Bessis"],
+  ["3/4", "Dodrans"],
+  ["5/6", "Dextans"],
+  ["11/12", "Deunx"],
 ]);
 
 // Initialize the fractions map

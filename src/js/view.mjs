@@ -44,8 +44,8 @@ function naturalDayView({naturalDay, naturalBedtime}) {
 
   view.push(`
     <div class="mt-4 grid grid-cols-2 place-items-center text-center text-xs font-bold tracking-widest sm:mt-6 sm:text-sm lg:mt-8 lg:text-base">
-      <div class="text-amber-500 dark:text-yellow-100">TEMPUS 🌞 DIEI</div>
-      <div class="text-indigo-500 dark:text-purple-100">TEMPUS 🌚 NOCTIS</div>
+      <div class="text-amber-500 dark:text-yellow-100">TEMPUS 🌞 DIURNUM</div>
+      <div class="text-indigo-500 dark:text-purple-100">TEMPUS 🌚 NOCTURNUM</div>
     </div>
   `);
 
@@ -178,7 +178,7 @@ function dayDurationView({dayMilliseconds, nightMilliseconds, isDay}) {
   // Margin reduced by 4px because of the hours list in the previous block
   return [`
     <div class="mt-3 text-center text-xs font-bold tracking-widest text-gray-600 sm:mt-5 sm:text-sm lg:mt-7 lg:text-base dark:text-stone-100">
-      <span class="text-amber-500 dark:text-yellow-100">DIU 🌞</span> ET <span class="text-indigo-500 dark:text-purple-100">NOX 🌚</span> DURATIO
+      LONGITUDO <span class="text-amber-500 dark:text-yellow-100">🌞 DIEI</span> ET <span class="text-indigo-500 dark:text-purple-100">🌚 NOCTIS</span>
     </div>
 
     <div class="mt-1 flex items-center justify-center text-center text-sm font-bold text-gray-600 sm:mt-2 sm:text-base lg:text-lg">
@@ -215,11 +215,11 @@ function statusLinesView({now, naturalDay, bedtime}) {
       </div>
 
       <div class="mt-1 lg:mt-2">
-        Tempus ad somnum quaerendum 🛏️&nbsp;${bedtime.toLocaleString(navigator.languages, {timeStyle: 'short'})}
+        Tempus ad somnum capiendum 🛏️&nbsp;${bedtime.toLocaleString(navigator.languages, {timeStyle: 'short'})}
       </div>
 
       <div class="mt-1 lg:mt-2">
-        Ortus solis diei sequentis ⏭️🌅&nbsp;${nextSunrise.toLocaleString(navigator.languages, {timeStyle: 'short'})}
+        Ortus solis die sequenti ⏭️🌅&nbsp;${nextSunrise.toLocaleString(navigator.languages, {timeStyle: 'short'})}
       </div>
 
       <div class="mt-1 lg:mt-2">
