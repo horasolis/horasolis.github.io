@@ -14,11 +14,11 @@
   limitations under the License.
 -->
 
-## Hora Solis – a Roman clock dividing day and night into temporal hours
+## <span lang="la">Hora Solis</span> – a Roman clock dividing day and night into temporal hours
 
-**[Hora Solis](https://horasolis.github.io)** is a digital reinterpretation of ancient Roman timekeeping — a system that aligns the day not with factory clocks or timezones, but with the movement of the sun across the sky.
+**[<span lang="la">Hora Solis</span>](https://horasolis.github.io)** is a digital reinterpretation of ancient [Roman timekeeping](https://en.wikipedia.org/wiki/Roman_timekeeping) — a system that aligns the day not with factory clocks or timezones, but with the movement of the sun across the sky.
 
-Unlike modern timekeeping, which divides every day into 24 identical hours regardless of season or place, the Roman system divides *daylight* into twelve equal hours (*horae*) and *night* into four watches (*vigiliae*). The length of these hours shifts with the seasons — shorter in winter, longer in summer — because the sun sets the pace.
+Unlike modern timekeeping, which divides every day into 24 identical hours regardless of season or place, the Roman system divides *daylight* into twelve equal hours (*<span lang="la">horae</span>*) and *night* into four watches (*<span lang="la">vigiliae</span>*). The length of these hours shifts with the seasons — shorter in winter, longer in summer — because the sun sets the pace.
 
 This project presents Roman time in a visual, intuitive form. It doesn’t just tell you the hour — it shows how the shape of the day is changing around you.
 
@@ -30,7 +30,7 @@ But natural time isn’t uniform. The sun doesn’t rise at 6:00 every day. Days
 
 Roman timekeeping invites us to see time differently: not as a grid to obey, but as a rhythm woven into the fabric of life. It expands and contracts with the sun, flows with the day, and settles into the night. It restores a deeper awareness of time — not as something measured, but as something lived.
 
-You may find yourself planning your day differently — setting aside the evening *vigiliae* for quiet work, time with family, reading, or creative focus. If you follow a biphasic sleep rhythm, you might align your shorter rest with midday or early night, letting the first hours of darkness become a calm, intentional space. Or perhaps you’ll discover the quiet clarity of early morning, just as the world begins to wake.
+You may find yourself planning your day differently — setting aside the evening *<span lang="la">vigiliae</span>* for quiet work, time with family, reading, or creative focus. If you follow a biphasic sleep rhythm, you might align your shorter rest with midday or early night, letting the first hours of darkness become a calm, intentional space. Or perhaps you’ll discover the quiet clarity of early morning, just as the world begins to wake.
 
 May this project help you rediscover your own rhythm.
 
@@ -40,39 +40,39 @@ May this project help you rediscover your own rhythm.
 
 The following reflects the Roman system of daily time:
 
-* **Tempus 🌞 diurnum / Tempus 🌚 nocturnum**  
+* **<span lang="la">Tempus 🌞 diurnum / Tempus 🌚 nocturnum</span>**  
   A two-column display of day and night temporal hours.
 
 * **Daytime hours Ⅰ–Ⅻ**  
   The twelve daytime hours measured from sunrise to sunset.
 
-* **Night watches (vigilia prima → vigilia quarta)**  
+* **Night watches (<span lang="la">vigilia prima → vigilia quarta</span>)**  
   The night divided into four watches, each spanning three nighttime hours.
 
-* **Tempus somni**  
+* **<span lang="la">Tempus somni</span>**  
   A suggested sleep period timed to support waking at sunrise.
 
-* **Longitudo 🌞 diei et 🌚 noctis**  
+* **<span lang="la">Longitudo 🌞 diei et 🌚 noctis</span>**  
   The duration of day and night, varying with the seasons.
 
-* **Dies civilis 🏛️**  
+* **<span lang="la">Dies civilis 🏛️</span>**  
   The civil time and date in modern notation.
 
-* **Ortus solis 🌅 / Occasus solis 🌇**  
+* **<span lang="la">Ortus solis 🌅 / Occasus solis 🌇</span>**  
   Sunrise and sunset times for the current day.
 
-* **Tempus ad somnum capiendum 🛏️**  
+* **<span lang="la">Tempus ad somnum capiendum 🛏️</span>**  
   Recommended bedtime for rising with the sun.
 
-* **Ortus solis die sequenti ⏭️🌅**  
+* **<span lang="la">Ortus solis die sequenti ⏭️🌅</span>**  
   Time of tomorrow’s sunrise.
 
-* **Cursus horologii 🐇/🐌**  
+* **<span lang="la">Cursus horologii 🐇/🐌</span>**  
   The pace of the clock, reflecting seasonal shifts in hour length.
 
 ## Supporting Hora Solis and future projects
 
-If you appreciate the work behind [Hora Solis](https://horasolis.github.io), consider supporting its [founding author](https://github.com/senotrusov). Your support honors the time and dedication already invested and helps make room for reflection, new ideas, and future projects beyond this one.
+If you appreciate the work behind [<span lang="la">Hora Solis</span>](https://horasolis.github.io), consider supporting its [founding author](https://github.com/senotrusov). Your support honors the time and dedication already invested and helps make room for reflection, new ideas, and future projects beyond this one.
 
 Donate with Bitcoin – bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s
 
@@ -132,7 +132,7 @@ The code in this project is licensed under the [Apache License, Version 2.0](LIC
   SOFTWARE.
   ```
 
-## Contributing to the Hora Solis project
+## Contributing to the <span lang="la">Hora Solis</span> project
 
 Take a look at the [CONTRIBUTING](CONTRIBUTING.md) file for contribution information, and check out the [CONTRIBUTORS](CONTRIBUTORS.md) file to see who has helped shape the project.
 
