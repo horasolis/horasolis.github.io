@@ -45,10 +45,10 @@ export function getClockSpeedText(romanSecond) {
 
   if (speedScale > 0) {
     // slower than a modern second
-    return `Cursus horologii 🐌&nbsp;${Math.round(speedScale)} centesimis tardius`;
+    return `Cursus horologii <span class="whitespace-nowrap">🐌 ${Math.round(speedScale)}</span> centesimis tardius`;
   } else {
     // faster than a modern second
-    return `Cursus horologii 🐇&nbsp;${Math.round(Math.abs(speedScale))} centesimis celerius`;
+    return `Cursus horologii <span class="whitespace-nowrap">🐇 ${Math.round(Math.abs(speedScale))}</span> centesimis celerius`;
   }
 }
 
@@ -60,28 +60,28 @@ export function getClockSpeedFractionsText(romanSecond) {
 
   if (speedScale > 0) {
     // slower than a modern second
-    return `Cursus horologii 🐌&nbsp;${fractionNames.get(closestFraction)} (${closestFraction}) parte tardius est`;
+    return `Cursus horologii ${fractionNames.get(closestFraction)} (${closestFraction}) parte <span class="whitespace-nowrap">🐌 tardior</span> est`;
   } else {
     // faster than a modern second
-    return `Cursus horologii 🐇&nbsp;${fractionNames.get(closestFraction)} (${closestFraction}) parte celerius est`;
+    return `Cursus horologii ${fractionNames.get(closestFraction)} (${closestFraction}) parte <span class="whitespace-nowrap">🐇 celerior</span> est`;
   }
 }
 
 const fractionNames = new Map([
-  ["1/24", "Semuncia"],
-  ["1/16", "Sextula"],
-  ["1/12", "Uncia"],
-  ["1/8", "Bes"], // Octava
-  ["1/6", "Sextans"],
-  ["1/4", "Quadrans"],
-  ["1/3", "Triens"],
-  ["5/12", "Quincunx"],
-  ["1/2", "Semis"],
-  ["7/12", "Septunx"],
-  ["2/3", "Bessis"],
-  ["3/4", "Dodrans"],
-  ["5/6", "Dextans"],
-  ["11/12", "Deunx"],
+  ["1/24", "semunciā"],
+  ["1/16", "sextulā"],
+  ["1/12", "unciā"],
+  ["1/8", "octavā"],
+  ["1/6", "sextante"],
+  ["1/4", "quadrante"],
+  ["1/3", "triente"],
+  ["5/12", "quincunce"],
+  ["1/2", "semisse"],
+  ["7/12", "septunce"],
+  ["2/3", "besse"],
+  ["3/4", "dodrante"],
+  ["5/6", "dextante"],
+  ["11/12", "deunce"],
 ]);
 
 // Initialize the fractions map
