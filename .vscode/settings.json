@@ -1,6 +1,6 @@
 {
   "search.exclude": {
-    "docs/css": true,    
-    "docs/js": true,    
+    "docs/css": true,
+    "docs/js": true,
   }
 }
