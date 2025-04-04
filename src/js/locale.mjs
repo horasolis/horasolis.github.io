@@ -14,11 +14,5 @@
   limitations under the License.
 */
 
-// Dies naturalis 🌖
-// Hora prima..duodecima diei
-// Prima..quarta vigilia noctis
-// pars minuta prima
-// pars minuta secunda
-
 export const numbersLatin = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"];
 export const numbersText = ["Prima", "Secunda", "Tertia", "Quarta", "Quinta", "Sexta", "Septima", "Octava", "Nona", "Decima", "Undecima", "Duodecima"];
