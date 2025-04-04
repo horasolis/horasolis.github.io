@@ -14,7 +14,7 @@
   limitations under the License.
 */
 
-import { calculateSolarEvents } from "./solarCalculator.mjs";
+import { calculateSolarEvents } from "./solarCalculation.mjs";
 import { Temporal } from 'temporal-polyfill';
 
 /**
@@ -125,6 +125,7 @@ function calculateIntervalDuration(from, to) {
 }
 
 export function getNaturalDay(position, now) {
+
   const {sunrise, sunset, nextSunrise, isPolarPhenomenon} = getSolarEvents(position, now);
 
   if (isPolarPhenomenon)
@@ -132,7 +133,9 @@ export function getNaturalDay(position, now) {
 
   const isDay = Temporal.ZonedDateTime.compare(now, sunset) === -1 // now < sunset
 
-  const {hour, minute, second, secondDuration, durationUntilNextSecond} = (isDay) ? calculateTime(sunrise, sunset, now) : calculateTime(sunset, nextSunrise, now);
+  const {hour, minute, second, secondDuration, durationUntilNextSecond} =  (isDay)
+    ? calculateTime(sunrise, sunset, now) 
+    : calculateTime(sunset, nextSunrise, now);
 
   const dayMilliseconds = calculateIntervalDuration(sunrise, sunset);
   const nightMilliseconds = calculateIntervalDuration(sunset, nextSunrise);
@@ -148,7 +151,9 @@ export function getNaturalDay(position, now) {
 
     const isDay = Temporal.ZonedDateTime.compare(point, sunset) === -1 // point < sunset
 
-    const {hour, minute, second} = (isDay) ? calculateTime(sunrise, sunset, point) : calculateTime(sunset, nextSunrise, point);
+    const {hour, minute, second} = (isDay) 
+      ? calculateTime(sunrise, sunset, point)
+      : calculateTime(sunset, nextSunrise, point);
 
     return {
       isDay,
