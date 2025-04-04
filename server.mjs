@@ -21,7 +21,7 @@ import open from 'open'; // Import the open module
 import os from 'os'; // For getting network interfaces
 import path from 'path';
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Function to list IP addresses (IPv4 and IPv6) excluding link-local IPv6 addresses
 function getIPAddresses() {
