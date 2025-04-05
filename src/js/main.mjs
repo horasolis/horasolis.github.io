@@ -23,25 +23,25 @@ function runClock(position) {
   const now = Temporal.Now.zonedDateTimeISO();
   const naturalDay = getNaturalDay(position, now);
 
-  const {isPolarPhenomenon} = naturalDay;
+  const {isPolarPhenomenon, durationUntilNextSecond} = naturalDay;
 
   const view = [];
 
   if (isPolarPhenomenon) {
-    view.push('Phaenomenon polare eo die fit 🐧');
+    view.push('<div class="container mx-auto mt-4 px-3 text-center text-black sm:px-4 dark:text-stone-50">Phaenomenon polare eo die fit 🐧</div>');
   } else {
-    const {nextSunrise, calculateTimeWithin, durationUntilNextSecond} = naturalDay;
+    const {nextSunrise, calculateTimeWithin} = naturalDay;
     const bedtime = nextSunrise.subtract({hours: 8, minutes: 20});
     const naturalBedtime = calculateTimeWithin(bedtime);
 
     view.push(...clockView({now, naturalDay, bedtime, naturalBedtime}));;
-
-    setTimeout(() => {
-      runClock(position);
-    }, durationUntilNextSecond);
   }
 
   document.getElementById('time-display').innerHTML = view.join('');
+
+  setTimeout(() => {
+    runClock(position);
+  }, durationUntilNextSecond);
 }
 
 function collapsibleSection(prefix) {

@@ -129,7 +129,7 @@ export function getNaturalDay(position, now) {
   const {sunrise, sunset, nextSunrise, isPolarPhenomenon} = getSolarEvents(position, now);
 
   if (isPolarPhenomenon)
-    return {isPolarPhenomenon};
+    return {isPolarPhenomenon, durationUntilNextSecond: 5 * 1000}; // Let's save some batteries for the polar explorers.
 
   const isDay = Temporal.ZonedDateTime.compare(now, sunset) === -1 // now < sunset
 
