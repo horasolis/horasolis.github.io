@@ -52,7 +52,7 @@ var Ho=["\u2160","\u2161","\u2162","\u2163","\u2164","\u2165","\u2166","\u2167",
       </div>
 
       <div class="mt-1 lg:mt-2">
-        Ortus solis die sequenti \u23ED\uFE0F\u{1F305}&nbsp;${o.toLocaleString(navigator.languages,{timeStyle:"short"})}
+        Ortus solis die sequenti \u23ED\uFE0F&thinsp;\u{1F305}&nbsp;${o.toLocaleString(navigator.languages,{timeStyle:"short"})}
       </div>
 
       <div class="mt-1 lg:mt-2">

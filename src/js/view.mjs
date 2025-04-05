@@ -219,7 +219,7 @@ function statusLinesView({now, naturalDay, bedtime}) {
       </div>
 
       <div class="mt-1 lg:mt-2">
-        Ortus solis die sequenti ⏭️🌅&nbsp;${nextSunrise.toLocaleString(navigator.languages, {timeStyle: 'short'})}
+        Ortus solis die sequenti ⏭️&thinsp;🌅&nbsp;${nextSunrise.toLocaleString(navigator.languages, {timeStyle: 'short'})}
       </div>
 
       <div class="mt-1 lg:mt-2">
