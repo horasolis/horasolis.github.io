@@ -15,16 +15,17 @@
 */
 
 /*
-```js
-Intl.supportedValuesOf('timeZone')
 JSON.stringify(Intl.supportedValuesOf('timeZone'));
 
-const firefox = [];
-const chrome = [];
+firefox = JSON.parse(?);
+chrome = JSON.parse(?);
+safari = JSON.parse(?);
 
-const uniqueArray = ([...new Set([...firefox, ...chrome])]).sort();
+uniqueArray = ([...new Set([...firefox, ...chrome, ...safari])]).sort();
+
 console.log(uniqueArray);
-```
+
+notFound = uniqueArray.filter(key => !(key in timeZoneLocations));
 */
 
 const timeZoneLocations = {
@@ -118,8 +119,8 @@ The last element in the object should be followed by a comma.
 'America/Aruba': [12.5167, -70.0333],
 'America/Asuncion': [-25.2637, -57.5759],
 'America/Atikokan': [48.75, -91.62],
-'America/Bahia': [-12.9777, -38.5016],
 'America/Bahia_Banderas': [20.6534, -105.2253],
+'America/Bahia': [-12.9777, -38.5016],
 'America/Barbados': [13.096, -59.6167],
 'America/Belem': [-1.4558, -48.5024],
 'America/Belize': [17.5046, -88.1962],
@@ -145,8 +146,8 @@ The last element in the object should be followed by a comma.
 'America/Cuiaba': [-15.6014, -56.0979],
 'America/Curacao': [12.1696, -68.99],
 'America/Danmarkshavn': [76.7667, -18.6667],
-'America/Dawson': [64.0611, -139.6699],
 'America/Dawson_Creek': [55.7617, -120.236],
+'America/Dawson': [64.0611, -139.6699],
 'America/Denver': [39.7392, -104.9903],
 'America/Detroit': [42.3314, -83.0458],
 'America/Dominica': [15.301, -61.3883],
@@ -222,8 +223,8 @@ The last element in the object should be followed by a comma.
 'America/Pangnirtung': [66.1333, -65.7167],
 'America/Paramaribo': [5.8667, -55.1667],
 'America/Phoenix': [33.4484, -112.074],
-'America/Port-au-Prince': [18.5392, -72.336],
 'America/Port_of_Spain': [10.6667, -61.5167],
+'America/Port-au-Prince': [18.5392, -72.336],
 'America/Porto_Velho': [-8.7612, -63.9039],
 'America/Puerto_Rico': [18.4655, -66.1057],
 'America/Punta_Arenas': [-53.1638, -70.9171],
@@ -234,6 +235,7 @@ The last element in the object should be followed by a comma.
 'America/Resolute': [74.7167, -94.9667],
 'America/Rio_Branco': [-9.975, -67.824],
 'America/Rosario': [-32.9468, -60.6393],
+'America/Santa_Isabel': [31.867, -116.617],
 'America/Santarem': [-2.4381, -54.6996],
 'America/Santiago': [-33.4489, -70.6693],
 'America/Santo_Domingo': [18.4861, -69.9312],
