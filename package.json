@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "main": "server.mjs",
   "scripts": {
-    "dev:esbuild": "esbuild src/js/main.mjs --bundle --format=esm --minify --out-extension:.js=.mjs --outdir=docs/js --sourcemap --watch",
+    "build": "npm-run-all --parallel prod:*",
+    "dev:esbuild": "esbuild src/js/main.mjs --bundle --format=esm --out-extension:.js=.mjs --outdir=docs/js --sourcemap --watch",
     "dev:repomix": "repomix --no-file-summary --ignore 'docs/css,docs/js,src/js/timezonePosition.mjs,CONTRIBUTING.md,CONTRIBUTORS.md,LICENSE'",
     "dev:server": "node server.mjs",
-    "dev:tailwindcss": "tailwindcss -i src/css/base.css -o docs/css/base.css --watch",
+    "dev:tailwindcss": "tailwindcss --input src/css/base.css --output docs/css/base.css --watch",
     "lint": "eslint src/js/*.mjs",
+    "prod:esbuild": "esbuild src/js/main.mjs --bundle --format=esm --out-extension:.js=.mjs --outdir=docs/js --sourcemap --minify",
+    "prod:tailwindcss": "tailwindcss --input src/css/base.css --output docs/css/base.css --minify",
     "start": "npm-run-all --parallel dev:*"
   },
   "author": "Hora Solis project contributors",
