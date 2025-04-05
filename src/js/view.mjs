@@ -97,7 +97,7 @@ function dayTimeColumnView({hour, minute, second, isDay}, naturalBedtime) {
 
     // Time text
     const timeText = getTimeText(line, hour, minute, second, isDay);
-    view.push(`<div class="absolute inset-x-3 inset-y-0 z-40 flex items-center font-bold text-gray-800 lg:text-lg dark:text-yellow-50">${timeText}</div>`);
+    view.push(`<div class="absolute inset-x-4 sm:inset-x-3 inset-y-0 z-40 flex items-center font-bold text-gray-800 lg:text-lg dark:text-yellow-50">${timeText}</div>`);
   
     // Hour line end
     view.push(`</div>`);
@@ -129,7 +129,7 @@ function nightTimeColumnView({vigilia, hour, minute, second, isDay}, naturalBedt
     const bedtimeHeight = calculateNightBedtimeHeight(vigiliaLine, naturalBedtime);
 
     if (bedtimeHeight > 0) {
-      view.push(`<div class="absolute inset-x-10 bottom-0 z-20 bg-fuchsia-300/40 sm:inset-x-16 lg:inset-x-28 dark:bg-rose-300/40" style="height: ${bedtimeHeight}%">`);
+      view.push(`<div class="absolute inset-x-12 bottom-0 z-20 bg-fuchsia-300/40 sm:inset-x-16 lg:inset-x-28 dark:bg-rose-300/40" style="height: ${bedtimeHeight}%">`);
 
       if ((bedtimeHeight >= 22 && bedtimeHeight <= 44) || bedtimeHeight >= 88) {
         const perhapsHide = !isDay && hour >= vigiliaLine * 3 && hour <= (vigiliaLine + 1) * 3 && (((bedtimeHeight >= 22 && bedtimeHeight <= 44) && hour === vigiliaLine * 3 + 2) || (bedtimeHeight >= 88 && hour === vigiliaLine * 3 + 1));
@@ -145,7 +145,7 @@ function nightTimeColumnView({vigilia, hour, minute, second, isDay}, naturalBedt
 
     // vigilia right side label
     view.push(`
-      <div class="absolute inset-x-2 inset-y-0 z-30 text-center text-xs font-extrabold leading-none tracking-widest text-gray-50 lg:text-sm dark:text-purple-50" style="writing-mode: vertical-rl; text-orientation: sideways;">
+      <div class="absolute inset-x-3 sm:inset-x-2 inset-y-0 z-30 text-center text-xs font-extrabold leading-none tracking-widest text-gray-50 lg:text-sm dark:text-purple-50" style="writing-mode: vertical-rl; text-orientation: sideways;">
         VIGILIA&ensp;${numbersText[vigiliaLine].toUpperCase()}
       </div>
     `);
@@ -153,11 +153,11 @@ function nightTimeColumnView({vigilia, hour, minute, second, isDay}, naturalBedt
     // Hour blocks
     for (let line = 0; line < 3; line++) {
       // Hour line start
-      view.push(`<div class="relative z-40 mr-8 h-[48px] border-b-4 ${line < 2 ? 'border-dashed border-white dark:border-stone-600' : 'border-transparent'} lg:h-[56px]">`);
+      view.push(`<div class="relative z-40 mr-9 sm:mr-8 h-[48px] border-b-4 ${line < 2 ? 'border-dashed border-white dark:border-stone-600' : 'border-transparent'} lg:h-[56px]">`);
 
       // Time text
       const timeText = getTimeText(vigiliaLine * 3 + line, hour, minute, second, !isDay);
-      view.push(`<div class="absolute inset-x-3 inset-y-0 z-50 flex items-center font-bold text-gray-800 lg:text-lg dark:text-purple-50">${timeText}</div>`);
+      view.push(`<div class="absolute inset-x-4 sm:inset-x-3 inset-y-0 z-50 flex items-center font-bold text-gray-800 lg:text-lg dark:text-purple-50">${timeText}</div>`);
     
       // Hour line end
       view.push(`</div>`);

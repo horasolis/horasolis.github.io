@@ -625,14 +625,19 @@ video {
   right: 2.5rem;
 }
 
-.inset-x-2 {
-  left: 0.5rem;
-  right: 0.5rem;
+.inset-x-12 {
+  left: 3rem;
+  right: 3rem;
 }
 
 .inset-x-3 {
   left: 0.75rem;
   right: 0.75rem;
+}
+
+.inset-x-4 {
+  left: 1rem;
+  right: 1rem;
 }
 
 .inset-y-0 {
@@ -693,8 +698,8 @@ video {
   margin-left: 1.5rem;
 }
 
-.mr-8 {
-  margin-right: 2rem;
+.mr-9 {
+  margin-right: 2.25rem;
 }
 
 .mt-1 {
@@ -1039,7 +1044,7 @@ video {
   }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .xxs\:whitespace-nowrap {
     white-space: nowrap;
   }
@@ -1051,9 +1056,23 @@ video {
     right: 4rem;
   }
 
+  .sm\:inset-x-2 {
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .sm\:inset-x-3 {
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+
   .sm\:mx-1 {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
+  }
+
+  .sm\:mr-8 {
+    margin-right: 2rem;
   }
 
   .sm\:mt-2 {
