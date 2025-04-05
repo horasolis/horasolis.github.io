@@ -4,7 +4,7 @@
   "main": "server.mjs",
   "scripts": {
     "dev:esbuild": "esbuild src/js/main.mjs --bundle --format=esm --minify --out-extension:.js=.mjs --outdir=docs/js --sourcemap --watch",
-    "dev:repomix": "repomix --ignore 'docs/css,docs/js,src/js/timezonePosition.mjs,LICENSE'",
+    "dev:repomix": "repomix --no-file-summary --ignore 'docs/css,docs/js,src/js/timezonePosition.mjs,CONTRIBUTING.md,CONTRIBUTORS.md,LICENSE'",
     "dev:server": "node server.mjs",
     "dev:tailwindcss": "tailwindcss -i src/css/base.css -o docs/css/base.css --watch",
     "lint": "eslint src/js/*.mjs",
