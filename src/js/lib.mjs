@@ -103,11 +103,11 @@ export function locateUser() {
 
         reject(new Error('Failed to retrieve geolocation and no stored location data.'));
       },
-      {
-        // Specify options for the geolocation request (e.g., caching behavior)
-        // Chromium 130 has no location cache
-        // Firefox 132 has a cache that stores geodata for at least 12 hours, maybe longer
-        maximumAge: 15 * 60 * 1000 // Maximum age of cached location data (15 minutes)
+      { // Geolocation options
+        maximumAge: 15 * 60 * 1000, // Accept a cached position up to 15 minutes old (in milliseconds)
+                                    //   * Chromium 130 does not use a location cache
+                                    //   * Firefox 132 caches geolocation data for at least 12 hours, possibly longer
+        timeout: 5 * 60 * 1000      // Time to wait for location before timing out (5 minutes, in milliseconds)
       }
     );
   });
