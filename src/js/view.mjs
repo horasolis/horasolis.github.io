@@ -97,7 +97,7 @@ function dayTimeColumnView({hour, minute, second, isDay}, naturalBedtime) {
 
     // Time text
     const timeText = getTimeText(line, hour, minute, second, isDay);
-    view.push(`<div class="absolute inset-x-4 sm:inset-x-3 inset-y-0 z-40 flex items-center font-bold text-gray-800 lg:text-lg dark:text-yellow-50">${timeText}</div>`);
+    view.push(`<div class="absolute inset-x-4 inset-y-0 z-40 flex items-center font-bold text-gray-800 sm:inset-x-3 lg:text-lg dark:text-yellow-50">${timeText}</div>`);
   
     // Hour line end
     view.push(`</div>`);
@@ -145,7 +145,7 @@ function nightTimeColumnView({vigilia, hour, minute, second, isDay}, naturalBedt
 
     // vigilia right side label
     view.push(`
-      <div class="absolute inset-x-3 sm:inset-x-2 inset-y-0 z-30 text-center text-xs font-extrabold leading-none tracking-widest text-gray-50 lg:text-sm dark:text-purple-50" style="writing-mode: vertical-rl; text-orientation: sideways;">
+      <div class="absolute inset-x-3 inset-y-0 z-30 text-center text-xs font-extrabold leading-none tracking-widest text-gray-50 sm:inset-x-2 lg:text-sm dark:text-purple-50" style="writing-mode: vertical-rl; text-orientation: sideways;">
         VIGILIA&ensp;${numbersText[vigiliaLine].toUpperCase()}
       </div>
     `);
@@ -157,7 +157,7 @@ function nightTimeColumnView({vigilia, hour, minute, second, isDay}, naturalBedt
 
       // Time text
       const timeText = getTimeText(vigiliaLine * 3 + line, hour, minute, second, !isDay);
-      view.push(`<div class="absolute inset-x-4 sm:inset-x-3 inset-y-0 z-50 flex items-center font-bold text-gray-800 lg:text-lg dark:text-purple-50">${timeText}</div>`);
+      view.push(`<div class="absolute inset-x-4 inset-y-0 z-50 flex items-center font-bold text-gray-800 sm:inset-x-3 lg:text-lg dark:text-purple-50">${timeText}</div>`);
     
       // Hour line end
       view.push(`</div>`);
