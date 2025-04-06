@@ -19,7 +19,8 @@
 module.exports = {
   content: [
     "docs/**/*.html",
-    "src/js/**/*.{js,mjs}"
+    "src/js/view.mjs"
+    // "src/js/**/*.{js,mjs}"
   ],
   theme: {
     extend: {

@@ -14,17 +14,202 @@
   limitations under the License.
 */
 
-import {
-  getHoursMinutesText,
-  getClockSpeedFractionsText,
-  getTimeText,
-  calculateDayHourProgress,
-  calculateNightVigiliaProgress,
-  calculateDayBedtimeHeight,
-  calculateNightBedtimeHeight
-} from './viewHelpers.mjs';
+const numbersLatin = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"];
+const numbersText = ["Prima", "Secunda", "Tertia", "Quarta", "Quinta", "Sexta", "Septima", "Octava", "Nona", "Decima", "Undecima", "Duodecima"];
 
-import {numbersText} from './locale.mjs';
+export function getHoursMinutesText(milliseconds) {
+  // Convert milliseconds to seconds
+  const seconds = milliseconds / 1000;
+
+  // Calculate hours
+  const hours = Math.floor(seconds / 3600);
+
+  // Calculate remaining seconds after extracting hours
+  const minutes = Math.floor((seconds % 3600) / 60);
+    
+  // Return formatted as "h:m"
+  return `${hours}h ${minutes}m`;
+}
+
+export function getTimeText(i, hour, minute, second, isCurrentInterval) {
+  const hourNumber = numbersLatin[i];
+
+  if (isCurrentInterval && i === hour)
+    return `${hourNumber} : ${minute.toString().padStart(2, '0')} : ${second.toString().padStart(2, '0')}`
+
+  return hourNumber;
+}
+
+export function getClockSpeedText(romanSecond) {
+  const modernSecond = 1000; // ms
+  const speedScale = ((romanSecond - modernSecond) / modernSecond) * 100;
+
+  if (speedScale > 0) {
+    // slower than a modern second
+    return `Cursus horologii <span class="whitespace-nowrap">🐌 ${Math.round(speedScale)}</span> centesimis tardius`;
+  } else {
+    // faster than a modern second
+    return `Cursus horologii <span class="whitespace-nowrap">🐇 ${Math.round(Math.abs(speedScale))}</span> centesimis celerius`;
+  }
+}
+
+export function getClockSpeedFractionsText(romanSecond) {
+  const modernSecond = 1000; // ms
+  const speedScale = ((romanSecond - modernSecond) / modernSecond);
+
+  const closestFraction = findClosestFraction(Math.abs(speedScale));
+
+  if (speedScale > 0) {
+    // slower than a modern second
+    return `Cursus horologii ${fractionNames.get(closestFraction)} (${closestFraction}) parte <span class="whitespace-nowrap">🐌 tardior</span> est`;
+  } else {
+    // faster than a modern second
+    return `Cursus horologii ${fractionNames.get(closestFraction)} (${closestFraction}) parte <span class="whitespace-nowrap">🐇 celerior</span> est`;
+  }
+}
+
+const fractionNames = new Map([
+  ["1/24", "semunciā"],
+  ["1/16", "sextulā"],
+  ["1/12", "unciā"],
+  ["1/8", "octavā"],
+  ["1/6", "sextante"],
+  ["1/4", "quadrante"],
+  ["1/3", "triente"],
+  ["5/12", "quincunce"],
+  ["1/2", "semisse"],
+  ["7/12", "septunce"],
+  ["2/3", "besse"],
+  ["3/4", "dodrante"],
+  ["5/6", "dextante"],
+  ["11/12", "deunce"],
+]);
+
+// Initialize the fractions map
+const fractionDecimalValues = new Map(
+  Array.from(fractionNames.keys()).map((i) => {
+    const [a, b] = i.split('/');
+    return [a / b, i];
+  })
+);
+
+// Function to find the closest key and return its value
+function findClosestFraction(n) {
+  let closestKey = null;
+  let smallestDifference = Infinity;
+
+  // Iterate over the Map's keys
+  for (const key of fractionDecimalValues.keys()) {
+    const difference = Math.abs(key - n); // Calculate the absolute difference
+    if (difference < smallestDifference) {
+      smallestDifference = difference; // Update smallest difference
+      closestKey = key; // Update closest key
+    }
+  }
+
+  // Return the value associated with the closest key
+  return fractionDecimalValues.get(closestKey);
+}
+
+export function calculateDayHourProgress(line, hour, minute, second) {
+  // If line has already passed
+  if (line <  hour)
+    return 100;
+
+  // If line is current
+  if (line === hour) {
+    const elapsedSeconds = minute * 60 + second;
+    const totalSeconds = 3600; // Total seconds in 1 hour
+
+    const progress = (elapsedSeconds / totalSeconds) * 100;
+    return Math.min(100, Math.max(0, progress)).toFixed(3); // Clamp to valid range
+  }
+  
+  // If line hasn't started
+  return 0;
+}
+
+export function calculateNightVigiliaProgress(vigiliaLine, vigilia, hour, minute, second) {
+  // If vigiliaLine has already passed
+  if (vigiliaLine < vigilia) return 100;
+
+  // If vigiliaLine is current
+  if (vigiliaLine === vigilia) {
+    // Check for invalid input scenario
+    if (hour < vigilia * 3)
+      throw new Error('The hour is earlier than the vigilia start');
+
+    const elapsedSeconds = (hour - vigilia * 3) * 3600 + minute * 60 + second;
+    const totalSeconds = 3600 * 3; // Total seconds in 3 hours
+    const progress = (elapsedSeconds / totalSeconds) * 100;
+    return Math.min(100, Math.max(0, progress)).toFixed(3); // Clamp to valid range
+  }
+  
+  // If vigiliaLine hasn't started
+  return 0;
+}
+
+/**
+ * Calculate the height percentage for bedtime progress during the day.
+ *
+ * @param {number} line - The current time "line" (hour) to compare against.
+ * @param {Object} time - An object containing the current hour, minute, and second.
+ * @param {number} time.hour - The current hour of the day (0-23).
+ * @param {number} time.minute - The current minute of the hour (0-59).
+ * @param {number} time.second - The current second of the minute (0-59).
+ * @returns {number} - The height percentage (0-100).
+ */
+export function calculateDayBedtimeHeight(line, { hour, minute, second, isDay }) {
+  if (!isDay)
+    return 0;
+
+  // If the current line (hour) is later than the specified hour, return 100%.
+  if (line > hour) 
+    return 100;
+
+  // If the current line (hour) matches the specified hour, calculate the percentage of the hour completed.
+  if (line === hour) {
+    const totalSeconds = 3600; // Total seconds in an hour
+    const elapsedSeconds = (minute * 60) + second; // Convert minutes and seconds to total elapsed seconds
+    const percentageCompleted = (elapsedSeconds / totalSeconds) * 100;
+    
+    const remainingPercentage = 100 - percentageCompleted; // Remaining percentage for the hour
+    return Math.min(100, Math.max(0, remainingPercentage)).toFixed(3); // Clamp to valid range
+  }
+
+  // If the current line (hour) is earlier than the specified hour, return 0%.
+  return 0;
+}
+
+export function calculateNightBedtimeHeight(vigiliaLine, {vigilia, hour, minute, second, isDay}) {
+  if (isDay)
+    return 100;
+
+  // If the current vigiliaLine is later than the specified vigilia, return 100%.
+  if (vigiliaLine > vigilia)
+    return 100;
+
+  // If vigiliaLine is current
+  if (vigiliaLine === vigilia) {
+    // Check for invalid input scenario
+    if (hour < vigilia * 3)
+      throw new Error('The hour is earlier than the vigilia start');
+
+    const totalSeconds = 3600 * 3; // Total seconds in 1 vigilia
+    const elapsedSeconds = (hour - vigilia * 3) * 3600 + minute * 60 + second;
+    const percentageCompleted = (elapsedSeconds / totalSeconds) * 100;
+
+    const remainingPercentage = 100 - percentageCompleted; // Remaining percentage for the vigilia
+    return Math.min(100, Math.max(0, remainingPercentage)).toFixed(3); // Clamp to valid range
+  }
+
+  // If the current vigiliaLine is earlier than the specified vigilia, return 0%.
+  return 0;
+}
+
+export function polarPhenomenonView() {
+  return ['<div class="container mx-auto mt-4 px-3 text-center text-black sm:px-4 dark:text-stone-50">Phaenomenon polare eo die fit 🐧</div>'];
+}
 
 export function clockView(clockViewData) {
   const view = [];
