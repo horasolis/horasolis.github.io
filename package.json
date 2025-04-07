@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "main": "server.mjs",
   "scripts": {
-    "build": "npm-run-all --parallel prod:*",
+    "build:esbuild": "esbuild src/js/main.mjs --bundle --format=esm --out-extension:.js=.mjs --outdir=docs/js --sourcemap --minify",
+    "build:tailwindcss": "tailwindcss --input src/css/base.css --output docs/css/base.css --minify",
+    "build": "npm-run-all --sequential build:* post-build:*",
     "dev:esbuild": "esbuild src/js/main.mjs --bundle --format=esm --out-extension:.js=.mjs --outdir=docs/js --sourcemap --watch",
     "dev:repomix": "repomix --no-file-summary --ignore 'docs/css,docs/js,src/js/timezonePosition.mjs,CONTRIBUTING.md,CONTRIBUTORS.md,LICENSE'",
     "dev:server": "node server.mjs",
     "dev:tailwindcss": "tailwindcss --input src/css/base.css --output docs/css/base.css --watch",
     "lint": "eslint src/js/*.mjs",
-    "prod:esbuild": "esbuild src/js/main.mjs --bundle --format=esm --out-extension:.js=.mjs --outdir=docs/js --sourcemap --minify",
-    "prod:tailwindcss": "tailwindcss --input src/css/base.css --output docs/css/base.css --minify",
+    "post-build:html-assets-hash": "node lib/html-assets-hash.mjs docs/index.html",
     "start": "npm-run-all --parallel dev:*"
   },
   "author": "Hora Solis project contributors",
