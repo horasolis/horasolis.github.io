@@ -16,6 +16,4 @@
 
 ## List of contributors
 
-Thanks to everyone who contributed – your efforts are truly appreciated!
-
-- **[Stanislav Senotrusov](https://github.com/senotrusov)** – Founding Author
+- **[Stanislav Senotrusov](https://github.com/senotrusov)** – the founding author

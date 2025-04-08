@@ -14,7 +14,7 @@
   limitations under the License.
 -->
 
-# Contributing to the Hora Solis project
+# Contribution guidelines
 
 ## Code signing
 

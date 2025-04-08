@@ -100,7 +100,7 @@ Bringing these ideas to life will take time and effort. Whether or not they happ
 
 ## License
 
-The code in this project is licensed under the [Apache License, Version 2.0](LICENSE), unless otherwise noted below.
+Unless otherwise noted below, the contents of this project are licensed under the [Apache License, Version 2.0](LICENSE). Some components may be provided under different terms, such as the MIT License or public domain.
 
 * [NOAA Solar Calculator](https://gml.noaa.gov/grad/solcalc/), provided by Global Monitoring Laboratory of the National Oceanic and Atmospheric Administration (NOAA), Boulder, Colorado, USA (https://gml.noaa.gov).
 
@@ -132,9 +132,9 @@ The code in this project is licensed under the [Apache License, Version 2.0](LIC
   SOFTWARE.
   ```
 
-## Contributing to the <span lang="la">Hora Solis</span> project
+## Get involved
 
-Take a look at the [CONTRIBUTING](CONTRIBUTING.md) file for contribution information, and check out the [CONTRIBUTORS](CONTRIBUTORS.md) file to see who has helped shape the project.
+Check out the [CONTRIBUTING](CONTRIBUTING.md) file to learn how to contribute, and the [CONTRIBUTORS](CONTRIBUTORS.md) file to see who’s helped make it happen.
 
 ## Further reading
 
