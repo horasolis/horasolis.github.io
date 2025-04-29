@@ -76,7 +76,7 @@ If you appreciate the work behind [<span lang="la">Hora Solis</span>](https://ho
 
 Donate with Bitcoin – bc1qn3cy5hg9esu8tt3kpq2t0khhjmqz7tmxpxfn4s
 
-![Donate with Bitcoin, QR code](docs/images/donate-link.png).
+![Donate with Bitcoin, QR code](docs/images/donate-link.png)
 
 If you find this project helpful, share it with others who might like it — whether it’s chatting with friends or posting about it on social media. Every little mention helps it reach someone who might really appreciate it.
 
